@@ -1,0 +1,132 @@
+header {
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    max-width: 200px;
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+.nav li {
+    float: right;
+}
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 100px 100px;
+    text-decoration: none;
+}
+.nav li a:hover {
+    background-color: #111;
+}
+.mySkills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.flexContainer > div {
+    flex: 0 0 calc(33% - 10px);
+    margin: 5px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+.flexContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.myWork {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.workGrid {
+    display: grid;
+    grid-template-areas:
+        "project1-image project1-info"
+        "project2-image project2-info";
+}
+
+.workGrid > div {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+
+.workGrid img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .mySkills .flexContainer {
+        flex-direction: column;
+    }
+
+    .mySkills .flexContainer > div {
+        flex: 0 0 100%;
+    }
+    .myWork .workGrid {
+        display: grid;
+        grid-template-areas:
+            "project1-image"
+            "project1-info"
+            "project2-image"
+            "project2-info";
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+    }
+    
+    .myWork .workGrid > div {
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+}
+
+body, h1, h3, p, button {
+    font-family: 'Palatino', sans-serif;
+    color: #000;
+}
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Palatino', sans-serif;
+}
+
+
+.contact-options {
+    font-size: 18px;
+}
+
+.contact-options a {
+    text-decoration: none;
+    color: #333;
+    margin: 10px;
+}
+
+.contact-options a:hover {
+    color: #0077B5; 
+}
